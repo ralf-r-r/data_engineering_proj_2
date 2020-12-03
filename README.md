@@ -1,6 +1,6 @@
 # Data Warehousing with AWS Redshift
 This projects implements an ETL pipeline to transfers data from files in a S3 bucket to analytics tables on redshift.
-The data resides in S3, in a directory of JSON logs on user activity, as well as a directory with JSON metadata on the songs. 
+The data resides in S3, in a directory of JSON logs on user activity, as well as a directory with JSON metadata on the songs.
 The project defines fact and dimension tables for a star schema.
 
 # Porject Structure
@@ -10,10 +10,10 @@ The project defines fact and dimension tables for a star schema.
 - **dwh.cfg**: Redshift database credentials and IAM role
 
 # Data Set
-The data consists of a song and a log data set for song play analysis. 
+The data consists of a song and a log data set for song play analysis.
 
-### Song Data Set 
-The song dataset is a subset of real data from the Million Song Dataset. Each file is in JSON format and contains metadata about a song and the artist of that song. The files are partitioned by the first three letters of each song's track ID. 
+### Song Data Set
+The song dataset is a subset of real data from the Million Song Dataset. Each file is in JSON format and contains metadata about a song and the artist of that song. The files are partitioned by the first three letters of each song's track ID.
 The song dataset resides in a S3 bucket and this is the link for it:
 ```s3://udacity-dend/song_data```
 
@@ -30,7 +30,7 @@ log_data/2018/11/2018-11-12-events.json
 log_data/2018/11/2018-11-13-events.json
 ```
 And below is an example of what the data in a log file, 2018-11-12-events.json, looks like.
-![image_1](img/log_data_example)
+![image_1](img/log_data_example.png)
 
 # Tables
 The ```create_table.py``` script creates the following tables:
