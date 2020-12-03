@@ -4,12 +4,22 @@ from sql_queries import create_table_queries, drop_table_queries
 
 
 def drop_tables(cur, conn):
+    """
+    drops tables on the redshift cluster in case that the tables already exist
+    :param cur: psycopg2 cursor object
+    :param conn: psycopg2 connection object
+    """
     for query in drop_table_queries:
         cur.execute(query)
         conn.commit()
 
 
 def create_tables(cur, conn):
+    """
+    creates tables on the redshift cluster
+    :param cur: psycopg2 cursor object
+    :param conn: psycopg2 connection object
+    """
     for query in create_table_queries:
         cur.execute(query)
         conn.commit()
@@ -30,3 +40,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
