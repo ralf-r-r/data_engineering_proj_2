@@ -6,7 +6,7 @@ The project defines fact and dimension tables for a star schema.
 # Porject Structure
 - **sql_queries.py**: Contains the SQL statements for: create tables, drop tables, copy data from S3 to Redshift, insert values into fact and dimension tables
 - **create_tables.py**: Cotains the python code to create the tables and define the columns and data types
-- **etl.py**: Python code for: copy data from S3 to staging tables on the refshift cluster, insert values from staging tables to fact and dimension tables
+- **etl.py**: Python code for: copy data from S3 to staging tables on the redshift cluster, insert values from staging tables to fact and dimension tables
 - **dwh.cfg**: Redshift database credentials and IAM role
 
 # Data Set
